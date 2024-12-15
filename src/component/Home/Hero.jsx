@@ -11,6 +11,7 @@ import axios from "axios";
 // Import CSS
 import "./hero.css";
 
+
 const Hero = () => {
   const [slides, setSlides] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -22,6 +23,7 @@ const Hero = () => {
         const response = await axios.get(
           "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/slider"
         );
+       
         const sliderData = response.data.map((item) => ({
           id: item._id,
           name: item.name,
@@ -38,6 +40,7 @@ const Hero = () => {
 
     fetchSliderData();
   }, []);
+
 
   if (loading) {
     return <div className="text-white text-center py-10">Loading...</div>;
