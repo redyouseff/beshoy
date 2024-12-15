@@ -20,7 +20,7 @@ const Hero = () => {
     const fetchSliderData = async () => {
       try {
         const response = await axios.get(
-          "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/slider"
+          "https://yousefjoyaback.onrender.com/api/slider"
         );
   
         // Check if response.data exists and is an array
@@ -51,7 +51,8 @@ const Hero = () => {
     return <div className="text-white text-center py-10">Loading...</div>;
   }
 
-  const baseURL = "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app";
+  const baseURL = "https://yousefjoyaback.onrender.com";
+  console.log(slides)
   return (
     <div className="hero">
       <div className="relative">

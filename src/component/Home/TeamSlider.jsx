@@ -20,7 +20,7 @@ const TeamSlider = () => {
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading team members</div>;
-  const baseURL = "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app";
+  const baseURL = "https://yousefjoyaback.onrender.com";
   return (
     <section className="py-16 bg-black text-[#EFECE6] flex items-center justify-center min-h-screen">
       <div className="container mx-auto px-6 lg:px-12 text-center">

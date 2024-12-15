@@ -9,7 +9,7 @@ const Presentation = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/secondsection"
+          "https://yousefjoyaback.onrender.com/api/secondsection"
         );
         if (response.data && response.data.length > 0) {
           setData(response.data[0]); // Assuming you want the first object in the array
@@ -58,7 +58,7 @@ const Presentation = () => {
             <div className="relative group">
               {data && data.image ? (
                 <img
-                  src={` https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${data.image}`}
+                  src={` https://yousefjoyaback.onrender.com${data.image}`}
                   alt="Presentation"
                   className="rounded-lg shadow-lg transition-transform transform group-hover:scale-105 w-full"
                   style={{ maxHeight: "855px" }}

@@ -48,7 +48,7 @@ function AgentSlider() {
     const fetchAgentsData = async () => {
       try {
         const response = await axios.get(
-          "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/partner"
+          "https://yousefjoyaback.onrender.com/api/partner"
         );
         setAgentsData(response.data);
         setLoading(false);
@@ -78,7 +78,7 @@ function AgentSlider() {
                 <div className="flex flex-col justify-center items-center bg-[#111612] shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105">
                   <div className="bg-[#f0ede6] w-fit mx-auto rounded-2xl">
                     <img
-                      src={`https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${agent.image}`}
+                      src={`https://yousefjoyaback.onrender.com${agent.image}`}
                       alt={`AgentLogo ${index + 1}`}
                       className="mx-auto w-60 h-36 object-contain rounded-xl border-2 border-[#698f8c]"
                     />

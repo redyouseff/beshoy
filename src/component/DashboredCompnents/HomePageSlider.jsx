@@ -13,13 +13,13 @@ const HomePageSlider = () => {
     const fetchCards = async () => {
       try {
         const response = await axios.get(
-          "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/slider"
+          "https://yousefjoyaback.onrender.com/api/slider"
         );
         const fetchedCards = response.data.map((item) => ({
           id: item._id,
           projectName: item.name,
           projectUrl: item.url,
-          imageUrl: `https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${item.image}`,
+          imageUrl: `https://yousefjoyaback.onrender.com/api${item.image}`,
         }));
         setCards(fetchedCards);
       } catch (error) {
@@ -54,7 +54,7 @@ const HomePageSlider = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/slider",
+        "https://yousefjoyaback.onrender.com/api/slider",
         formData
       );
 
@@ -62,7 +62,7 @@ const HomePageSlider = () => {
         id: response.data._id,
         projectName: newProjectName,
         projectUrl: newProjectUrl,
-        imageUrl: `https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${response.data.image}`,
+        imageUrl: `https://yousefjoyaback.onrender.com${response.data.image}`,
       };
 
       setCards([...cards, newCard]);
@@ -82,7 +82,7 @@ const HomePageSlider = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/slider/${id}`
+        `https://yousefjoyaback.onrender.com/api/slider/${id}`
       );
       setCards(cards.filter((card) => card.id !== id));
       alert("Slider deleted successfully!");

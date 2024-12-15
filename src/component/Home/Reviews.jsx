@@ -81,7 +81,7 @@ import axios from "axios";
 function Reviews() {
     const [reviews,setreviews] =useState([]);
     useEffect(() => {
-      axios.get('https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/testimonial')
+      axios.get('https://yousefjoyaback.onrender.com/api/testimonial')
         .then(response => {
           setreviews(response.data); 
         })
