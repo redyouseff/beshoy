@@ -12,11 +12,11 @@ const HeroAbout = () => {
     const fetchData = async () => {
       try {
         // Make the API request to fetch data by ID
-        const response = await axios.get(`https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/hero-sections/${dataId}`);
+        const response = await axios.get(`https://yousefjoyaback.onrender.com/api/hero-sections/${dataId}`);
         setData(response.data);
         setLoading(false);
       } catch (err) {
-        setError("Error fetching data");
+      
         setLoading(false);
       }
     };
@@ -32,7 +32,7 @@ const HeroAbout = () => {
     return <div className="text-center text-[#ff0000]">{error}</div>;
   }
 
-  const baseurl = "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app"; // Set base URL for images
+  const baseurl = "https://yousefjoyaback.onrender.com"; // Set base URL for images
 
   return (
     <div className="relative">

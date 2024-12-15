@@ -51,7 +51,7 @@ const ServiceCardsSection = () => {
                   variants={iconVariants} // Rotate only the hovered card’s image
                 >
                   <img
-                    src={`https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${service.image}`} // Use the full image URL
+                    src={`https://yousefjoyaback.onrender.com${service.image}`} // Use the full image URL
                     alt={service.title}
                     className="w-full h-full object-contain"
                   />

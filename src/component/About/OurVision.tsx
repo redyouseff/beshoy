@@ -26,7 +26,7 @@ const OurVision = () => {
   if (!section) {
     return <div>Loading...</div>; // Show loading while fetching data
   }
-  const baseurl = "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app"
+  const baseurl = "https://yousefjoyaback.onrender.com"
   return (
     <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full">
       {/* Text Section */}

@@ -40,7 +40,7 @@ function AboutPage() {
   useEffect(() => {
     const fetchFeatures = async () => {
       try {
-        const response = await axios.get("https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/hero-sections/675d45d8f80100a8efe8dda8");
+        const response = await axios.get("https://yousefjoyaback.onrender.com/api/hero-sections/675d45d8f80100a8efe8dda8");
 
         // Check if response.data.data is an array
       
@@ -119,7 +119,7 @@ function AboutPage() {
       <div
         className="w-full bg-no-repeat bg-cover bg-fixed min-h-[400px] md:min-h-[550px]"
         style={{
-          backgroundImage: `url('https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${image || "/default-image.jpg"}')`,
+          backgroundImage: `url('https://yousefjoyaback.onrender.com${image || "/default-image.jpg"}')`,
         }}
       ></div>
 

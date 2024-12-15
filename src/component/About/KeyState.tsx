@@ -5,7 +5,7 @@ const KeyStats = () => {
   const [stats, setStats] = useState([]); // State to hold the fetched data
   const [loading, setLoading] = useState(true); // State to track loading status
 
-  const baseUrl = "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/keystats"; // Your API URL
+  const baseUrl = "https://yousefjoyaback.onrender.com/api/keystats"; // Your API URL
 
   // Fetch the stats data from the API on component mount
   useEffect(() => {

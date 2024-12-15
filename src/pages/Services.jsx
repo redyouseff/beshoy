@@ -30,6 +30,7 @@ function Services() {
         console.error("Error fetching image:", error);
       });
   }, []);
+ 
 
   return (
     <div className="bg-[#111612] overflow-hidden">
@@ -39,7 +40,7 @@ function Services() {
           <div
             className="hidden md:block absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url(https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${imageUrl || ""})`, // Concatenate with the base URL
+              backgroundImage: `url(https://yousefjoyaback.onrender.com${imageUrl || ""})`, // Concatenate with the base URL
             }}
           ></div>
 
@@ -47,7 +48,7 @@ function Services() {
           <div
             className="md:hidden absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url(https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${imageUrl || ""})`, // Concatenate with the base URL
+              backgroundImage: `url(https://yousefjoyaback.onrender.com${imageUrl || ""})`, // Concatenate with the base URL
             }}
           ></div>
 

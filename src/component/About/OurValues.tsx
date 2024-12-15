@@ -12,7 +12,7 @@ const OurValues = () => {
     const fetchValues = async () => {
       try {
         // Replace the URL with your actual API endpoint
-        const response = await axios.get("https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/values");
+        const response = await axios.get("https://yousefjoyaback.onrender.com/api/values");
         setValues(response.data);
         setLoading(false);
       } catch (err) {

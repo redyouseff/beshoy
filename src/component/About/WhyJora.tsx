@@ -12,7 +12,7 @@ const WhyJoya = () => {
     const fetchData = async () => {
       try {
         // Replace this URL with your actual API endpoint for fetching data by ID
-        const response = await axios.get(`https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/hero-sections/${dataId}`);
+        const response = await axios.get(`https://yousefjoyaback.onrender.com/api/hero-sections/${dataId}`);
         setData(response.data);
         setLoading(false);
       } catch (err) {
@@ -32,7 +32,7 @@ const WhyJoya = () => {
     return <div className="text-center text-[#ff0000]">{error}</div>;
   }
 
-  const baseurl = "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app"; // Set base URL for images
+  const baseurl = "https://yousefjoyaback.onrender.com"; // Set base URL for images
 
   return (
     <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full">

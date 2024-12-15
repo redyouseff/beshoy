@@ -22,7 +22,7 @@ const Blog = () => {
 
   // Log the blogs data to debug
   console.log("Blogs Data:", blogs);
-  const baseURL = "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app";
+  const baseURL = "https://yousefjoyaback.onrender.com";
   return (
     <div className="bg-[#111612] text-white">
       {/* Hero Section */}
