@@ -12,20 +12,17 @@ function OffPlan() {
   useEffect(() => {
     const fetchOffPlanData = async () => {
       try {
-        const response = await axios.get("https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/off-plan");
+        const response = await axios.get("https://yousefjoyaback.onrender.com/api/off-plan");
         setOffplan(response.data); // Update state with fetched data
-        
       } catch (error) {
         console.error("Error fetching the off-plan data:", error);
       } finally {
         setLoading(false); // Set loading to false
       }
     };
-    
 
     fetchOffPlanData();
   }, []);
-  console.log(offplan)
 
   // Initialize AOS animations
   useEffect(() => {
@@ -45,14 +42,12 @@ function OffPlan() {
     return text;
   };
 
-  const maxDescriptionLength = 140;
+  const maxTitleLength = 40; // Limit for title truncation
+  const maxDescriptionLength = 140; // Limit for description truncation
 
   return (
     <div className="bg-[#111612] min-h-screen flex flex-col items-center pt-48 pb-12">
-      <h2
-        className="text-5xl font-semibold text-white mb-14 mt-20"
-        data-aos="fade-down"
-      >
+      <h2 className="text-5xl font-semibold text-white mb-14 mt-20" data-aos="fade-down">
         Off Plan
       </h2>
 
@@ -64,22 +59,28 @@ function OffPlan() {
             <Link
               to={`/Projects/Off-Plan2/${item._id}`} // Use _id for dynamic routing
               key={item._id} // Use _id as the unique key
-              className="bg-[#1c1e1b] rounded-lg shadow-lg p-6 text-center transform transition duration-300 hover:scale-105"
+              className="bg-[#1c1e1b] rounded-lg shadow-lg p-6 flex flex-col justify-between text-center transform transition duration-300 hover:scale-105"
               data-aos="fade-up"
               data-aos-delay={`${index * 200}`}
             >
+              {/* Image Section */}
               <div className="overflow-hidden rounded-lg mb-6">
                 <img
-                   src={item.imgSrcs?.[0] 
-                    ? `https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${item.imgSrcs[0]}` 
-                    : "/default-image.jpg"} alt={item.title}
+                  src={item.imgSrcs?.[0] 
+                    ? `https://yousefjoyaback.onrender.com${item.imgSrcs[0]}` 
+                    : "/default-image.jpg"} 
+                  alt={item.title}
                   className="w-full h-40 sm:h-48 lg:h-64 object-cover rounded-lg transform transition-transform duration-500 hover:scale-110"
                 />
               </div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3">
-                {item.title}
+
+              {/* Title Section */}
+              <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3 truncate">
+                {truncateText(item.title, maxTitleLength)}
               </h3>
-              <p className="text-[#a0b3b1] text-sm sm:text-base leading-relaxed">
+
+              {/* Description Section */}
+              <p className="text-[#a0b3b1] text-sm sm:text-base leading-relaxed overflow-hidden text-ellipsis line-clamp-3">
                 {truncateText(item.description, maxDescriptionLength)}
               </p>
             </Link>

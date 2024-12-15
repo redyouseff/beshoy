@@ -29,7 +29,7 @@ function ContactPage() {
     // Fetch description on mount
     const fetchDescription = async () => {
       try {
-        const response = await axios.get("https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/contact");
+        const response = await axios.get("https://yousefjoyaback.onrender.com/api/contact");
         setDescription(response.data[0].description); // Set the description from the API response
       } catch (error) {
         console.error("Error fetching contact data:", error);

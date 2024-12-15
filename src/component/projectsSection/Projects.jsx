@@ -13,16 +13,13 @@ function Projects() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        // Fetch Off-Plan Projects
-        const offplanResponse = await axios.get("https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/off-plan");
+        const offplanResponse = await axios.get("https://yousefjoyaback.onrender.com/api/off-plan");
         setOffplan(offplanResponse.data);
 
-        // Fetch Features Projects
-        const featuresResponse = await axios.get("https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/feature");
+        const featuresResponse = await axios.get("https://yousefjoyaback.onrender.com/api/feature");
         setFeatures(featuresResponse.data);
 
-        // Fetch Luxury Projects
-        const luxuryResponse = await axios.get("https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/laxury");
+        const luxuryResponse = await axios.get("https://yousefjoyaback.onrender.com/api/laxury");
         setLuxury(luxuryResponse.data);
       } catch (error) {
         console.error("Error fetching project data:", error);
@@ -52,8 +49,8 @@ function Projects() {
     return text;
   };
 
-  const maxDescriptionLength = 120;
-  console.log(offplan)
+  const maxTitleLength = 40; // Limit for titles
+  const maxDescriptionLength = 120; // Limit for descriptions
 
   return (
     <div className="bg-[#111612] min-h-screen flex flex-col items-center pt-48 pb-12">
@@ -71,7 +68,7 @@ function Projects() {
             <a
               href={`/Projects/Off-Plan2/${project._id}`}
               key={project._id}
-              className="bg-[#1c1e1b] rounded-lg shadow-lg p-6 text-center transform transition duration-300 hover:scale-105"
+              className="bg-[#1c1e1b] rounded-lg shadow-lg p-6 flex flex-col justify-between items-center transform transition duration-300 hover:scale-105 overflow-hidden"
               data-aos="fade-up"
               data-aos-delay={`${index * 200}`}
             >
@@ -82,8 +79,13 @@ function Projects() {
                   className="w-full h-64 object-cover rounded-lg transform transition-transform duration-500 hover:scale-110"
                 />
               </div>
-              <h3 className="text-3xl font-semibold text-white mb-4">{project.title}</h3>
-              <p className="text-[#a0b3b1] text-base leading-relaxed">
+              <h3
+                className="text-2xl font-semibold text-white mb-4 text-center truncate"
+                title={project.title} // Show full title on hover
+              >
+                {truncateText(project.title, maxTitleLength)}
+              </h3>
+              <p className="text-[#a0b3b1] text-base leading-relaxed text-center overflow-hidden text-ellipsis line-clamp-3">
                 {truncateText(project.description, maxDescriptionLength)}
               </p>
             </a>
@@ -105,19 +107,24 @@ function Projects() {
             <a
               href={`/Projects/Features2/${project._id}`}
               key={project._id}
-              className="bg-[#1c1e1b] rounded-lg shadow-lg p-6 text-center transform transition duration-300 hover:scale-105"
+              className="bg-[#1c1e1b] rounded-lg shadow-lg p-6 flex flex-col justify-between items-center transform transition duration-300 hover:scale-105 overflow-hidden"
               data-aos="fade-up"
               data-aos-delay={`${index * 200}`}
             >
               <div className="overflow-hidden rounded-lg mb-6">
-              <img
+                <img
                   src={`https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${project?.imgSrcs?.[0]}` || "/default-image.jpg"}
                   alt={project.title}
                   className="w-full h-64 object-cover rounded-lg transform transition-transform duration-500 hover:scale-110"
                 />
               </div>
-              <h3 className="text-3xl font-semibold text-white mb-4">{project.title}</h3>
-              <p className="text-[#a0b3b1] text-base leading-relaxed">
+              <h3
+                className="text-2xl font-semibold text-white mb-4 text-center truncate"
+                title={project.title}
+              >
+                {truncateText(project.title, maxTitleLength)}
+              </h3>
+              <p className="text-[#a0b3b1] text-base leading-relaxed text-center overflow-hidden text-ellipsis line-clamp-3">
                 {truncateText(project.description, maxDescriptionLength)}
               </p>
             </a>
@@ -139,19 +146,24 @@ function Projects() {
             <a
               href={`/Projects/Luxury2/${project._id}`}
               key={project._id}
-              className="bg-[#1c1e1b] rounded-lg shadow-lg p-6 text-center transform transition duration-300 hover:scale-105"
+              className="bg-[#1c1e1b] rounded-lg shadow-lg p-6 flex flex-col justify-between items-center transform transition duration-300 hover:scale-105 overflow-hidden"
               data-aos="fade-up"
               data-aos-delay={`${index * 200}`}
             >
               <div className="overflow-hidden rounded-lg mb-6">
-              <img
+                <img
                   src={`https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${project?.imgSrcs?.[0]}` || "/default-image.jpg"}
                   alt={project.title}
                   className="w-full h-64 object-cover rounded-lg transform transition-transform duration-500 hover:scale-110"
                 />
               </div>
-              <h3 className="text-3xl font-semibold text-white mb-4">{project.title}</h3>
-              <p className="text-[#a0b3b1] text-base leading-relaxed">
+              <h3
+                className="text-2xl font-semibold text-white mb-4 text-center truncate"
+                title={project.title}
+              >
+                {truncateText(project.title, maxTitleLength)}
+              </h3>
+              <p className="text-[#a0b3b1] text-base leading-relaxed text-center overflow-hidden text-ellipsis line-clamp-3">
                 {truncateText(project.description, maxDescriptionLength)}
               </p>
             </a>
@@ -163,3 +175,7 @@ function Projects() {
 }
 
 export default Projects;
+
+
+
+
