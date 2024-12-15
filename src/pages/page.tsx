@@ -27,29 +27,7 @@ const Home = () => {
       <div data-aos="fade-up" className="transition-transform ease-in-out">
         <Hero />
       </div>
-      <div data-aos="fade-left" className="transition-transform ease-in-out">
-        <Presentation />
-      </div>
-
-      {/* Placeholder for future components */}
-      <div data-aos="fade-up" className="transition-transform ease-in-out">
-        {/* <FeaturedProperties /> */}
-        {/* <PropertiesToBuy /> */}
-        {/* <PropertySlider /> */}
-      </div>
-
-      <div data-aos="fade-right" className="transition-transform ease-in-out">
-        <Services />
-      </div>
-      <div data-aos="fade-up" className="transition-transform ease-in-out">
-        <Reviews />
-      </div>
-      <div data-aos="fade-up" className="transition-transform ease-in-out">
-        <TeamSlider />
-      </div>
-      <div data-aos="fade-up" className="transition-transform ease-in-out">
-        <AgentSlider />
-      </div>
+     
     </div>
   );
 };
