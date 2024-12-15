@@ -16,30 +16,35 @@ const Hero = () => {
   const [slides, setSlides] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch slider data from the API
   useEffect(() => {
     const fetchSliderData = async () => {
       try {
         const response = await axios.get(
           "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/slider"
         );
-       
-        const sliderData = response.data.map((item) => ({
-          id: item._id,
-          name: item.name,
-          url: item.url,
-          image: item.image, // Ensure image path is correct
-        }));
+  
+        // Check if response.data exists and is an array
+        const sliderData = Array.isArray(response.data)
+          ? response.data.map((item) => ({
+              id: item._id,
+              name: item.name,
+              url: item.url,
+              image: item.image,
+            }))
+          : [];
+  
         setSlides(sliderData);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching slider data:", error);
+        setSlides([]); // Ensure slides is not undefined
         setLoading(false);
       }
     };
-
+  
     fetchSliderData();
   }, []);
+  
 
 
   if (loading) {
