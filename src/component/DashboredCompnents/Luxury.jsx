@@ -107,7 +107,7 @@ const LuxuryDashboard = () => {
 
         <div className="mb-6 grid grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium mb-2">luxury Image</label>
+            <label className="block text-sm font-medium mb-2">Property Image</label>
             <input
               type="file"
               onChange={handleImageChange}
@@ -141,7 +141,7 @@ const LuxuryDashboard = () => {
         </div>
 
         <div className="mb-6">
-          <label className="block text-sm font-medium mb-2">off plan Title</label>
+          <label className="block text-sm font-medium mb-2">Property  Title</label>
           <input
             type="text"
             placeholder="Enter property name"
@@ -152,7 +152,7 @@ const LuxuryDashboard = () => {
         </div>
 
         <div className="mb-6">
-          <label className="block text-sm font-medium mb-2">off plan Description</label>
+          <label className="block text-sm font-medium mb-2">Property Description</label>
           <textarea
             placeholder="Enter property description..."
             value={description}
@@ -160,7 +160,7 @@ const LuxuryDashboard = () => {
             className="w-full p-4 bg-[#111612] text-white border border-[#3d6a64] rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             rows="5"
           />
-          <label className="block text-sm font-medium mb-2">off plan details</label>
+          <label className="block text-sm font-medium mb-2">Property details</label>
           <textarea
             placeholder="Enter property details..."
             value={details}

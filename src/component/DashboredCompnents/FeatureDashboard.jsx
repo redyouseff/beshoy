@@ -99,7 +99,7 @@ const FeatureDashboard = () => {
       <Sidebar />
 
       <div className="flex-1 p-6">
-        <h1 className="text-2xl font-semibold mb-6 text-center">Feature Projects </h1>
+        <h1 className="text-2xl font-semibold mb-6 text-center"> Feature Projects </h1>
 
         {error && <div className="text-red-500 mb-4">{error}</div>}
 
@@ -107,7 +107,7 @@ const FeatureDashboard = () => {
 
         <div className="mb-6 grid grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium mb-2">feature Image</label>
+            <label className="block text-sm font-medium mb-2">Property Image</label>
             <input
               type="file"
               onChange={handleImageChange}
@@ -141,7 +141,7 @@ const FeatureDashboard = () => {
         </div>
 
         <div className="mb-6">
-          <label className="block text-sm font-medium mb-2">feature Title</label>
+          <label className="block text-sm font-medium mb-2">Property Title</label>
           <input
             type="text"
             placeholder="Enter property name"
@@ -152,7 +152,7 @@ const FeatureDashboard = () => {
         </div>
 
         <div className="mb-6">
-          <label className="block text-sm font-medium mb-2">feature Description</label>
+          <label className="block text-sm font-medium mb-2">Property Description</label>
           <textarea
             placeholder="Enter property description..."
             value={description}
@@ -160,7 +160,7 @@ const FeatureDashboard = () => {
             className="w-full p-4 bg-[#111612] text-white border border-[#3d6a64] rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             rows="5"
           />
-          <label className="block text-sm font-medium mb-2">feature details</label>
+          <label className="block text-sm font-medium mb-2">Property details</label>
           <textarea
             placeholder="Enter property details..."
             value={details}

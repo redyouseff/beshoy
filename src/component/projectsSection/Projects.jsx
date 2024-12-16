@@ -10,6 +10,7 @@ function Projects() {
   const [loading, setLoading] = useState(true);
 
   // Fetch data from APIs
+  
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -74,7 +75,7 @@ function Projects() {
             >
               <div className="overflow-hidden rounded-lg mb-6">
                 <img
-                  src={`https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${project?.imgSrcs?.[0]}` || "/default-image.jpg"}
+                  src={`https://yousefjoyaback.onrender.com${project?.imgSrcs?.[0]}` || "/default-image.jpg"}
                   alt={project.title}
                   className="w-full h-64 object-cover rounded-lg transform transition-transform duration-500 hover:scale-110"
                 />
