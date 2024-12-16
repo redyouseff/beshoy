@@ -30,7 +30,7 @@ const OffPlanDetails = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get(`https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/off-plan/${id}`);
+        const response = await axios.get(`https://yousefjoyaback.onrender.com/api/off-plan/${id}`);
         setoffplan(response.data); // Update blogs state with fetched data
       } catch (error) {
         console.error("Error fetching the blogs:", error);
@@ -48,7 +48,7 @@ const OffPlanDetails = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get(`https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/off-plan`);
+        const response = await axios.get(`https://yousefjoyaback.onrender.com/api/off-plan`);
         setallofplan(response.data); // Update blogs state with fetched data
       } catch (error) {
         console.error("Error fetching the blogs:", error);
@@ -61,22 +61,6 @@ const OffPlanDetails = () => {
   }, []); 
 
  
-  const project = {
-    title: "Bugatti Residences",
-    description: `Bugatti Residences by Binghatti is the world’s first project by the renowned French luxury car brand Bugatti. Binghatti Properties, one of Dubai’s leading developers, is the creator of the complex. Located in the thriving neighbourhood of Business Bay, the upcoming striking landmark will comprise 2 towers, each 52 storeys high (4B+G+1P+45+R).`,
-    details: `The architectural concept of Bugatti Residences by Binghatti will skillfully combine expert craftsmanship with the impeccable heritage of Bugatti. That said, the contours of the project’s exteriors will be reminiscent of ripples of the beaches of the French Riviera and the dunes of Dubai.`,
-    imgSrcs: [
-      "/features/WhatsApp Image 2024-11-05 at 13.53.30_fb6c3c26.jpg",
-      "/features/WhatsApp Image 2024-11-05 at 13.53.31_fdda7eeb.jpg",
-      "/features/WhatsApp Image 2024-11-04 at 21.54.12_4a2182ac.jpg",
-    ],
-    paymentPlan: {
-      description: `flexible and attractive payment plan options for buyers and investors, looking to have an exclusive beachfront lifestyle. Grab this opportunity to have a lifestyle on the Palm, where the rest of the things are convenien`,
-     
-    },
-   
-  
-  };
    
    
 const proximity= [
@@ -93,7 +77,7 @@ const proximity= [
     const fetchAllProjects = async () => {
       try {
         const response = await axios.get(
-          "https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app/api/off-plan"
+          "https://yousefjoyaback.onrender.com/api/off-plan"
         );
         setallofplan(response.data);
       } catch (error) {
@@ -120,7 +104,7 @@ const proximity= [
       transition={{ duration: 1.5, delay: 0.2 }}
       className="hidden sm:block absolute inset-0 bg-cover bg-center"
       style={{
-        backgroundImage: `url(https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${offplan?.imgSrcs?.[0] || "/default-desktop-image.jpg"})`,
+        backgroundImage: `url(https://yousefjoyaback.onrender.com${offplan?.imgSrcs?.[0] || "/default-desktop-image.jpg"})`,
       }}
     ></motion.div>
 
@@ -295,7 +279,7 @@ const proximity= [
                     key={index}
                     src={
                       src
-                        ? `https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${src}`
+                        ? `https://yousefjoyaback.onrender.com${src}`
                         : "/default-image.jpg"
                     }
                     alt={`Property Image ${index + 1}`}
@@ -306,7 +290,7 @@ const proximity= [
               <img
                 src={
                   offplan.imgSrcs
-                    ? `https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${offplan.imgSrcs?.[2]}`
+                    ? `https://yousefjoyaback.onrender.com${offplan.imgSrcs?.[2]}`
                     : "/default-image.jpg"
                 }
                 alt="Property Image 3"
@@ -453,7 +437,7 @@ const proximity= [
                     <img
                       src={
                         project.imgSrcs?.[0]
-                          ? `https://sleepy-blinnie-beshoynasry-2859766e.koyeb.app${project.imgSrcs[0]}`
+                          ? `https://yousefjoyaback.onrender.com${project.imgSrcs[0]}`
                           : "/default-image.jpg"
                       }
                       alt={project.title || "Project Image"}
